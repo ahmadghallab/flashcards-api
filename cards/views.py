@@ -6,3 +6,7 @@ from . import serializers
 class ListCreateStudySet(generics.ListCreateAPIView):
     queryset = models.StudySet.objects.all()
     serializer_class = serializers.StudySetSerializer
+
+class RetrieveUpdateDestroyStudySet(generics.RetrieveUpdateDestroyAPIView):
+    queryset = models.StudySet.objects.all()
+    serializer_class = serializers.StudySetSerializer
