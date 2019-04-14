@@ -7,10 +7,18 @@ app_name = 'apiv1'
 urlpatterns = [
     path('studysets/',
         views.ListCreateStudySet.as_view(),
-        name='studysets_list'
+        name='studyset_list'
     ),
     path('studysets/<int:pk>/',
         views.RetrieveUpdateDestroyStudySet.as_view(),
-        name='studysets_detail'
+        name='studyset_detail'
+    ),
+    path('studysets/<int:studyset_id>/cards/',
+        views.ListCreateCard.as_view(),
+        name='card_list'
+    ),
+    path('cards/<int:pk>/',
+        views.RetrieveUpdateDestroyCard.as_view(),
+        name='card_detail'
     ),
 ]
