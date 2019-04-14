@@ -28,8 +28,7 @@ SECRET_KEY = '!m0djih5axva#1q2^viss%9f8w9(0juklfcz5_k-fi@ou#uf7u'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'localhost:8080',
-    'https://morning-ridge-19364.herokuapp.com'
+    'localhost:8080'
 ]
 
 # Application definition
@@ -43,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'rest_framework.authtoken',
+    'corsheaders',
     'cards',
     'accounts',
 ]
@@ -141,8 +141,7 @@ REST_FRAMEWORK = {
 }
 
 CORS_ORIGIN_WHITELIST = (
-    'localhost:8080',
-    'https://morning-ridge-19364.herokuapp.com'
+    'localhost:8080'
 )
 
 django_heroku.settings(locals())
