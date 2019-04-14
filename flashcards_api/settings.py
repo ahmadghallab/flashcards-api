@@ -27,8 +27,10 @@ SECRET_KEY = '!m0djih5axva#1q2^viss%9f8w9(0juklfcz5_k-fi@ou#uf7u'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = [
+    'localhost:8080',
+    'morning-ridge-19364.herokuapp.com'
+]
 
 # Application definition
 
@@ -140,6 +142,7 @@ REST_FRAMEWORK = {
 
 CORS_ORIGIN_WHITELIST = (
     'localhost:8080',
+    'morning-ridge-19364.herokuapp.com'
 )
 
 django_heroku.settings(locals())
