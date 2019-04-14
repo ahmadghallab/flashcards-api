@@ -29,7 +29,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'localhost:8080',
-    'morning-ridge-19364.herokuapp.com'
+    'https://morning-ridge-19364.herokuapp.com'
 ]
 
 # Application definition
@@ -142,7 +142,7 @@ REST_FRAMEWORK = {
 
 CORS_ORIGIN_WHITELIST = (
     'localhost:8080',
-    'morning-ridge-19364.herokuapp.com'
+    'https://morning-ridge-19364.herokuapp.com'
 )
 
 django_heroku.settings(locals())
