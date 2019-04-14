@@ -1,4 +1,5 @@
 from rest_framework import generics
+from rest_framework import permissions
 
 from . import models
 from . import serializers
