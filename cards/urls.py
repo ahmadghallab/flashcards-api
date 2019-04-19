@@ -5,7 +5,7 @@ from . import views
 app_name = 'apiv1'
 
 urlpatterns = [
-    path('studysets/',
+    path('users/<int:user_id>/studysets/',
         views.ListCreateStudySet.as_view(),
         name='studyset_list'
     ),
