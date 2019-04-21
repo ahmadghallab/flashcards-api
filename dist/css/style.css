@@ -1,0 +1,226 @@
+@font-face {
+  font-family: 'circular';
+  font-style: normal;
+  font-weight: normal;
+  src: url('circular-regular.woff') format('woff');
+}
+@font-face {
+  font-family: 'circular';
+  font-style: bold;
+  font-weight: bold;
+  src: url('circular-bold.woff') format('woff');
+}
+body {
+  font-family: 'circular', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #edeff0;
+}
+body, a, a:hover, a:focus, a:active {
+  color: #4b5658;
+  text-decoration: none;
+}
+.text-muted {
+  color: #7b8b8e !important;
+}
+.wrapper {
+  margin: 35px auto;
+}
+.flashcard {
+  min-height: calc(100vh - 320px);
+  max-height: 400px;
+  overflow: auto;
+}
+.highlight {
+  background: rgba(0,0,0,0.3);
+  padding: 0 1rem;
+  border-radius: 25px;
+}
+.mb-custom {
+  margin-bottom: 30px;
+}
+.pxy-custom {
+  padding: 3rem !important;
+}
+.default-card, .card__header, .card__body, .card__footer {
+  background-color: #ffffff;
+  padding: 1.5rem;
+}
+.default-card {
+  margin-bottom: 30px;
+  border-radius: 2rem;
+}
+.card__header {
+  border-radius: 2rem 2rem 0 0;
+}
+.card__footer {
+  border-radius: 0 0 2rem 2rem;
+  margin-bottom: 30px;
+}
+.verline {
+  display: block;
+  margin: 0 auto 30px;
+  width: 10px;
+  height: 47px;
+  background: #d4d9dd;
+  border-radius: 5px;
+}
+.bootstrap-nav {
+  margin: 0 auto;
+  height: 75px;
+}
+.bootstrap-nav a {
+  color: #b2bbbd;
+}
+.wrapper, .bootstrap-nav {
+  width: 90%;
+  max-width: 900px;
+}
+.card-deck>.card {
+  margin-bottom: 30px;
+  flex: 1 0 auto;
+  border: 0;
+  border-radius: 4px;
+  padding: 0.7rem;
+}
+.card-deck>.studyset {
+  box-shadow: 0 2px 0 rgba(0,0,0,0.06);
+}
+.card-deck>.studyset:after, .card-deck>.studyset:before {
+  content: "";
+  background: #fff;
+  height: 5px;
+  display: block;
+  box-shadow: 0 2px 0 rgba(0,0,0,0.07) inset, 0 2px 0 rgba(0,0,0,0.07);
+  border-radius: 0 0 4px 4px;
+  position: absolute;
+  top: 100%;
+  right: 10px;
+  left: 10px;
+  transition: .1s ease-in-out;
+}
+.card-deck>.studyset:before {
+  height: 10px;
+  left: 20px;
+  right: 20px;
+}
+.card-deck>.card:hover:after, .card-deck>.card:hover:before {
+  height: 10px;
+}
+.card-deck>.card:hover:before {
+  height: 20px;
+}
+.circle {
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid transparent;
+  font-weight: bold;
+  font-size: 0.8rem;
+  text-transform: lowercase;
+}
+.circle-sm {
+  width: 25px;
+  height: 25px;
+}
+.circle-md {
+  width: 40px;
+  height: 40px;
+}
+.form-control {
+  background: #e8ebed;
+  border: 2px solid #e8ebed;
+  font-weight: normal;
+  color: #576366;
+  border-radius: 10px;
+  font-size: 1.1rem;
+}
+.form-control:focus {
+  border-color: #b2bbbd;
+  background-color: transparent !important;
+}
+.search-box {
+  border-radius: 25px;
+  background-color: #fff;
+  border-color: #fff;
+  padding-left: .85rem;
+}
+.btn, a.btn {
+  padding: 0.5rem 1.2rem;
+  font-size: 14px;
+  font-weight: bold;
+  border: 2px solid transparent;
+  border-radius: 4px;
+}
+.btn:hover, a.circle:hover, a.badge:hover {
+  opacity: 0.7;
+}
+.btn[disabled], .inactive {
+  color: #fff !important;
+  opacity: 0.4 !important;
+  cursor: not-allowed;
+}
+.btn-lg {
+  padding: 25px;
+  font-size: 1.2rem;
+}
+::placeholder {
+  color: #b2bbbd !important;
+}
+label {
+  font-weight: bold;
+}
+.btn, .btn:focus, .form-control, .form-control:focus, .in-invalid:focus, .custom-control-input:focus~.custom-control-label::before {
+  box-shadow: none !important;
+}
+a, .form-control, .btn, .circle, .progress__value, .card__header, .badge {
+  transition: all .3s ease;
+}
+.icon {
+  width: 20px;
+  fill: #fff;
+}
+/*********** COLORS ***********/
+.grey {
+  background-color: #b7c0c7;
+}
+.orange {
+  background-color: #ff9800;
+}
+.green {
+  background-color: #4caf50;
+}
+.blue {
+  background-color: #2196f3;
+}
+.purple {
+  background-color: #8158fc;
+}
+.red {
+  background-color: #e91e63;
+}
+.brown {
+  background-color: #795548;
+}
+.transparent-dark {
+  background-color: rgba(0,0,0,0.3);
+}
+@keyframes fadeUp {
+  0% {
+    transform: translateY(5px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.fade-up {
+  animation: fadeUp 0.3s ease;
+}
+@media(min-width:575px) {
+  .card-deck>.card {
+    width: 30%
+  }
+}

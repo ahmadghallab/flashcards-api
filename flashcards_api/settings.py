@@ -28,7 +28,8 @@ SECRET_KEY = '!m0djih5axva#1q2^viss%9f8w9(0juklfcz5_k-fi@ou#uf7u'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'localhost:8080'
+    'localhost:8080',
+    'flashcards-backend.herokuapp.com'
 ]
 
 # Application definition
@@ -64,7 +65,7 @@ ROOT_URLCONF = 'flashcards_api.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'dist')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
