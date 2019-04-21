@@ -150,7 +150,8 @@ REST_FRAMEWORK = {
 }
 
 CORS_ORIGIN_WHITELIST = (
-    'localhost:8080'
+    'localhost:8080',
+    'flashcards-backend.herokuapp.com'
 )
 
 django_heroku.settings(locals())
