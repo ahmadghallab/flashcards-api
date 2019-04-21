@@ -10,7 +10,7 @@ class ListCreateStudySet(generics.ListCreateAPIView):
     def get_queryset(self):
         return self.queryset.filter(
             user_id=self.kwargs.get('user_id')
-        ).order_by('-id')
+        )
 
 class RetrieveUpdateDestroyStudySet(generics.RetrieveUpdateDestroyAPIView):
     queryset = models.StudySet.objects.all()
@@ -23,7 +23,7 @@ class ListCreateCard(generics.ListCreateAPIView):
     def get_queryset(self):
         return self.queryset.filter(
             studyset_id=self.kwargs.get('studyset_id')
-        ).order_by('-id')
+        )
 
 class RetrieveUpdateDestroyCard(generics.RetrieveUpdateDestroyAPIView):
     queryset = models.Card.objects.all()
