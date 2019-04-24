@@ -18,6 +18,3 @@ class Card(models.Model):
     color = models.CharField(max_length=15)
     studyset = models.ForeignKey(StudySet, related_name='cards', on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
-
-    class Meta:
-        unique_together = ['term', 'studyset']

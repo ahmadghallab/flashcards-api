@@ -19,6 +19,7 @@ class RetrieveUpdateDestroyStudySet(generics.RetrieveUpdateDestroyAPIView):
 class ListCreateCard(generics.ListCreateAPIView):
     queryset = models.Card.objects.all()
     serializer_class = serializers.CardSerializer
+    pagination_class = None
 
     def get_queryset(self):
         return self.queryset.filter(
