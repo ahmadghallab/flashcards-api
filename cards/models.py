@@ -15,6 +15,5 @@ class StudySet(models.Model):
 class Card(models.Model):
     term = models.CharField(max_length=50)
     definition = models.CharField(max_length=250)
-    color = models.CharField(max_length=15)
     studyset = models.ForeignKey(StudySet, related_name='cards', on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)

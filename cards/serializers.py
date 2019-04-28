@@ -9,5 +9,5 @@ class StudySetSerializer(serializers.ModelSerializer):
 
 class CardSerializer(serializers.ModelSerializer):
     class Meta:
-        fields = ('id', 'term', 'definition', 'color', 'studyset', 'created_at')
+        fields = ('id', 'term', 'definition', 'studyset', 'created_at')
         model = models.Card
