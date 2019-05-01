@@ -31,8 +31,19 @@ body, a, a:hover, a:focus, a:active {
   max-height: 450px;
   overflow: auto;
 }
+.verline {
+  display: block;
+  margin: 0 auto 30px;
+  width: 10px;
+  height: 47px;
+  background: rgb(221, 226, 240);
+  border-radius: 5px;
+}
 .white-space {
   white-space: pre-line;
+}
+.white-space h1 {
+  line-height: 1.4;
 }
 .answer-list {
   cursor: pointer;
@@ -65,7 +76,6 @@ body, a, a:hover, a:focus, a:active {
 .bootstrap-nav a {
   color: #fff;
 }
-
 .wrapper, .bootstrap-nav {
   width: 90%;
   max-width: 900px;
@@ -127,7 +137,7 @@ label {
 .btn, .btn:focus, .form-control, .form-control:focus, .in-invalid:focus, .custom-control-input:focus~.custom-control-label::before {
   box-shadow: none !important;
 }
-a, .form-control, .btn, .circle, .progress__value, .card__header, .badge {
+a, .form-control, .btn, .circle, .progress__value, .questionsProgressChild {
   transition: all .3s ease;
 }
 .icon {
@@ -136,13 +146,19 @@ a, .form-control, .btn, .circle, .progress__value, .card__header, .badge {
 }
 /*********** COLORS ***********/
 .magenta {
-  background-color: #ff5d9e;
+  background-color: #e91e63;
 }
 .light-purple {
   background-color: #AEAFE8;
 }
 .green {
   background-color: #4caf50;
+}
+.red {
+  background-color: #f44336;
+}
+.orange {
+  background-color: #ff9800;
 }
 .purple {
   background-color: #8158fc;
@@ -162,7 +178,4 @@ a, .form-control, .btn, .circle, .progress__value, .card__header, .badge {
 }
 .fade-up {
   animation: fadeUp 0.3s ease;
-}
-@media(min-width:575px) {
-
 }
