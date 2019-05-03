@@ -40,7 +40,7 @@ body, a, a:hover, a:focus, a:active {
 .white-space {
   white-space: pre-line;
 }
-.white-space h1 {
+.white-space h1, .white-space h2 {
   line-height: 1.4;
 }
 .answer-list {
