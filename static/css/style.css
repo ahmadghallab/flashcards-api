@@ -23,6 +23,9 @@ body, a, a:hover, a:focus, a:active {
 .text-muted {
   color: #8189a9 !important;
 }
+.top-nav {
+  box-shadow: 0 4px 12px 0 rgba(0,0,0,.15) !important;
+}
 .wrapper {
   margin: 110px auto 35px;
 }
@@ -143,8 +146,8 @@ a, .form-control, .btn, .circle, .progress__value, .questionsProgressChild {
   fill: #fff;
 }
 /********** COLORS **********/
-.magenta {
-  background-color: #ff5d9e;
+.red {
+  background-color: #F70C08;
 }
 .light-purple {
   background-color: #AEAFE8;
@@ -154,6 +157,31 @@ a, .form-control, .btn, .circle, .progress__value, .questionsProgressChild {
 }
 .transparent-dark {
   background-color: rgba(0,0,0,0.3);
+}
+/********** HIGHLIGHT COLORS **********/
+.yellow-hl {
+  background-color: #fff475;
+}
+.pink-hl {
+  background-color: #fdb6dd;
+}
+.teal-hl {
+  background-color: #a7ffeb;
+}
+.green-hl {
+  background-color: #ccff90;
+}
+.blue-hl {
+  background-color: #cbf0f8;
+}
+.brown-hl {
+  background-color: #e6c9a8;
+}
+.orange-hl {
+  background-color: #fbbc04;
+}
+.purple-hl {
+  background-color: #d7aefb;
 }
 /********** CARD SLIDE **********/
 .card-slide-enter-active, .card-slide-leave-active {
