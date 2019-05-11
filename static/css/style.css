@@ -1,50 +1,44 @@
-@font-face {
-  font-family: 'circular';
-  font-style: normal;
-  font-weight: normal;
-  src: url('circular-regular.woff') format('woff');
-}
-@font-face {
-  font-family: 'circular';
-  font-style: bold;
-  font-weight: bold;
-  src: url('circular-bold.woff') format('woff');
-}
 body {
-  font-family: 'circular', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background: #EDEFF5;
+  background: #edeff0;
 }
 body, a, a:hover, a:focus, a:active {
-  color: #1c1259;
+  color: #000;
   text-decoration: none;
 }
 .text-muted {
-  color: #8189a9 !important;
+  color: #a4a4a4 !important;
 }
 .top-nav {
-  box-shadow: 0 4px 12px 0 rgba(0,0,0,.15) !important;
+  box-shadow: 0 0 1px rgba(0,65,94,0.2);
 }
 .wrapper {
-  margin: 110px auto 35px;
+  margin: 110px auto 80px;
+}
+.progressBar {
+  position: relative;
+}
+.progressBarChild {
+  position: absolute;
+  left: 0;
+  top: 0;
+  min-height: 1px;
 }
 .flashcard {
-  min-height: 450px;
+  min-height: 400px;
 }
 .verline {
   display: block;
   margin: 0 auto 30px;
   width: 10px;
   height: 47px;
-  background: rgb(221, 226, 240);
+  background: #f9fafa;
   border-radius: 5px;
 }
 .white-space {
   white-space: pre-line;
 }
 .white-space h1, .white-space h2 {
-  line-height: 1.4;
+  line-height: 1.5;
 }
 .answer-list {
   cursor: pointer;
@@ -74,9 +68,6 @@ body, a, a:hover, a:focus, a:active {
   margin: 0 auto;
   height: 75px;
 }
-.bootstrap-nav a {
-  color: #fff;
-}
 .wrapper, .bootstrap-nav {
   width: 90%;
   max-width: 900px;
@@ -91,28 +82,30 @@ body, a, a:hover, a:focus, a:active {
   font-size: 0.8rem;
   text-transform: lowercase;
 }
-.circle-sm {
-  width: 25px;
-  height: 25px;
-}
 .circle-md {
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
 }
 .form-control {
-  background: #EDEFF5;
-  border: 2px solid #EDEFF5;
+  background: #e8ebed;
+  border: 2px solid #e8ebed;
   font-weight: normal;
   color: #576366;
   border-radius: 10px;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 .form-control:focus {
-  border-color: #EFEEF8;
+  border-color: #b2bbbd;
   background-color: transparent !important;
 }
+::placeholder {
+  color: #b2bbbd !important;
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: 100;
+}
 .btn, a.btn {
-  padding: 0.5rem 1.2rem;
+  padding: 0.6rem 1.5rem;
   font-size: 14px;
   font-weight: bold;
   border: 2px solid transparent;
@@ -121,16 +114,16 @@ body, a, a:hover, a:focus, a:active {
 .btn:hover, a.circle:hover, a.badge:hover {
   opacity: 0.7;
 }
-.btn[disabled], .inactive {
+.btn[disabled] {
   opacity: 0.5 !important;
   cursor: not-allowed;
+}
+.inactive {
+  opacity: 0.5 !important;
 }
 .btn-lg {
   padding: 25px !important;
   font-size: 1.2rem !important;
-}
-::placeholder {
-  color: #97a0bf !important;
 }
 label {
   font-weight: bold;
@@ -138,7 +131,7 @@ label {
 .btn, .btn:focus, .form-control, .form-control:focus, .in-invalid:focus, .custom-control-input:focus~.custom-control-label::before {
   box-shadow: none !important;
 }
-a, .form-control, .btn, .circle, .progress__value, .questionsProgressChild {
+a, .form-control, .btn, .circle, .progress__value, .progressBarChild {
   transition: all .3s ease;
 }
 .icon {
@@ -149,11 +142,17 @@ a, .form-control, .btn, .circle, .progress__value, .questionsProgressChild {
 .red {
   background-color: #F70C08;
 }
-.light-purple {
-  background-color: #AEAFE8;
+.blue {
+  background-color: royalblue;
 }
-.purple {
-  background-color: #8158fc;
+.coral {
+  background-color: coral;
+}
+.green {
+  background-color: #1DB954;
+}
+.light {
+  background-color: #f9fafa;
 }
 .transparent-dark {
   background-color: rgba(0,0,0,0.3);
@@ -183,44 +182,6 @@ a, .form-control, .btn, .circle, .progress__value, .questionsProgressChild {
 .purple-hl {
   background-color: #d7aefb;
 }
-/********** CARD SLIDE **********/
-.card-slide-enter-active, .card-slide-leave-active {
-  transition: all .3s ease;
-}
-.card-slide-enter, .card-slide-leave-to {
-  transform: translateX(10px);
-  opacity: 0;
-}
-/********** MODAL **********/
-.dialog-mask {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1050;
-  width: 100%;
-  height: 100%;
-  overflow-x: hidden;
-  overflow-y: auto;
-  background-color: rgba(100,107,131,.4);
-}
-.dialog-wrapper {
-  position: relative;
-  margin: 2.75rem auto;
-  pointer-events: none;
-  width: 90%;
-}
-.dialog-container {
-  position: relative;
-  width: 100%;
-  pointer-events: auto;
-}
-.mask, .dialog-leave-active {
-  transition: all .3s ease;
-}
-.dialog-leave-to {
-  transform: translateY(5px);
-  opacity: 0;
-}
 /********** FADE UP TRANSITION **********/
 @keyframes fadeUp {
   0% {
@@ -234,24 +195,4 @@ a, .form-control, .btn, .circle, .progress__value, .questionsProgressChild {
 }
 .fade-up {
   animation: fadeUp 0.3s ease;
-}
-/********** LOADER **********/
-@keyframes circleSpinner {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(359deg);
-  }
-}
-.circle-spinner {
-  margin: 50px auto;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  border-width: 4px;
-  border-style: solid;
-  border-color: #8d9aa5 #d4d9dd #d4d9dd;
-  border-image: initial;
-  animation: circleSpinner 1s linear 0s infinite normal none running;
 }
