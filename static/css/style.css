@@ -8,9 +8,6 @@ body, a, a:hover, a:focus, a:active {
 .text-muted {
   color: #8189a9 !important;
 }
-.flashcard h1 {
-  font-weight: 100;
-}
 .top-nav {
   background-color: #360060;
   box-shadow: 0 4px 12px 0 rgba(0,0,0,.15);
@@ -145,6 +142,9 @@ a, .form-control, .btn, .circle, .progress__value, .progressBarChild {
 .icon {
   width: 20px;
   fill: #fff;
+}
+.font-weight-lighter {
+  font-weight: 100 !important;
 }
 /********** COLORS **********/
 .purple {

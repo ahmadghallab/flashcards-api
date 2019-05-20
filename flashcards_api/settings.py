@@ -29,7 +29,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'localhost:8080',
-    'flashcards-backend.herokuapp.com'
+    'stickifybeta.herokuapp.com'
 ]
 
 # Application definition
@@ -151,7 +151,7 @@ REST_FRAMEWORK = {
 
 CORS_ORIGIN_WHITELIST = (
     'localhost:8080',
-    'flashcards-backend.herokuapp.com'
+    'stickifybeta.herokuapp.com'
 )
 
 django_heroku.settings(locals())
