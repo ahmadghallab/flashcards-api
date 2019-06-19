@@ -13,7 +13,7 @@ class StudySet(models.Model):
         unique_together = ['title', 'user']
 
 class Card(models.Model):
-    term = models.CharField(max_length=50)
-    definition = models.CharField(max_length=250)
+    term = models.CharField(max_length=250)
+    definition = models.TextField()
     studyset = models.ForeignKey(StudySet, related_name='cards', on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)

@@ -14,7 +14,6 @@ body, a, a:hover, a:focus, a:active {
 }
 .top-nav {
   background-color: #360060;
-  box-shadow: 0 4px 12px 0 rgba(0,0,0,.15);
 }
 .wrapper {
   margin: 120px auto;
